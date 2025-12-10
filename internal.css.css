@@ -1,0 +1,230 @@
+/* ===========================================
+   INTERNAL UI — De Goes Optimize
+   Para páginas internas: dashboard, CRUD,
+   página de login, página de listagem, etc.
+   =========================================== */
+
+/* ===== Paleta fixa ===== */
+:root{
+  --brand:#022859;
+  --accent:#F25430;
+  --tint:#EBF2F2;
+  --bg:#ffffff;
+  --fg:#0b1016;
+  --line:#e5e9ee;
+  --muted:#505F73;
+
+  --radius:14px;
+  --sp-1:8px;
+  --sp-2:12px;
+  --sp-3:16px;
+  --sp-4:24px;
+  --sp-5:32px;
+  --sp-6:48px;
+}
+
+/* ===== Base ===== */
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family: "Inter", sans-serif;
+  background:#f7f9fb;
+  color:var(--fg);
+}
+
+/* ===== Header fixo igual ao site principal ===== */
+.header-int{
+  background:color-mix(in oklab, #fff, var(--tint) 10%);
+  border-bottom:1px solid color-mix(in oklab, var(--line), var(--tint) 35%);
+  height:64px;
+  display:flex;
+  align-items:center;
+  padding:0 24px;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.header-int .brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:700;
+}
+.header-int .brand-circle{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  border:2px solid var(--brand);
+  display:grid;
+  place-items:center;
+  font-weight:800;
+  color:var(--brand);
+}
+
+/* ===== Layout padrão ===== */
+.page{
+  max-width:1100px;
+  margin:32px auto;
+  padding:0 24px;
+}
+.page h1{
+  font-size:28px;
+  margin-bottom:16px;
+  color:var(--brand);
+}
+
+/* ===== Cards ===== */
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:24px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.04);
+  margin-bottom:24px;
+}
+.card h2{
+  margin:0 0 12px;
+}
+
+/* ===== Botões ===== */
+.btn{
+  padding:12px 18px;
+  border-radius:12px;
+  background:var(--accent);
+  border:1px solid var(--accent);
+  color:#fff;
+  font-weight:700;
+  cursor:pointer;
+  transition:.15s ease;
+}
+.btn:hover{
+  background:color-mix(in oklab, var(--accent), #000 12%);
+}
+.btn-out{
+  background:transparent;
+  color:var(--brand);
+  border:1px solid var(--brand);
+}
+.btn-out:hover{
+  background:var(--brand);
+  color:#fff;
+}
+
+/* ===== Formulários ===== */
+form{
+  display:grid;
+  gap:18px;
+  max-width:620px;
+}
+input,textarea,select{
+  width:100%;
+  padding:14px 16px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+input:focus,textarea:focus,select:focus{
+  outline:none;
+  border-color:var(--brand);
+  box-shadow:0 0 0 3px rgba(2,40,89,.20);
+}
+
+/* ===== Tabelas (listar + CRUD) ===== */
+.table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+.table thead{
+  background:var(--brand);
+  color:#fff;
+}
+.table th, .table td{
+  padding:14px 16px;
+  border-bottom:1px solid var(--line);
+  font-size:15px;
+}
+.table tr:hover td{
+  background:#f4f8fc;
+}
+
+/* Ações CRUD */
+.table .actions{
+  display:flex;
+  gap:10px;
+}
+.action-edit{
+  color:#0a58b2;
+  font-weight:600;
+}
+.action-edit:hover{
+  text-decoration:underline;
+}
+.action-del{
+  color:#d92f2f;
+  font-weight:600;
+}
+.action-del:hover{
+  text-decoration:underline;
+}
+
+/* ===== Caixa de aviso ===== */
+.notice{
+  border:1px solid var(--line);
+  background:#f1f5f9;
+  padding:14px 16px;
+  border-radius:12px;
+  margin-bottom:16px;
+}
+
+/* ===== Login page ===== */
+.login-wrapper{
+  height:100vh;
+  display:grid;
+  place-items:center;
+  padding:24px;
+}
+.login-box{
+  width:100%;
+  max-width:420px;
+  background:#fff;
+  padding:32px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  box-shadow:0 6px 18px rgba(0,0,0,.06);
+}
+.login-box h2{
+  text-align:center;
+  margin:0 0 18px;
+  color:var(--brand);
+}
+
+/* ===== Menu lateral (caso precise no futuro) ===== */
+.sidebar{
+  width:240px;
+  background:#fff;
+  border-right:1px solid var(--line);
+  height:100vh;
+  position:fixed;
+  top:0;
+  left:0;
+  padding:24px;
+}
+.sidebar a{
+  display:block;
+  padding:12px 0;
+  color:var(--fg);
+  font-weight:600;
+}
+.sidebar a:hover{
+  color:var(--accent);
+}
+
+/* ===== Utilidades ===== */
+.mt-2{ margin-top:12px; }
+.mt-3{ margin-top:18px; }
+.center{ text-align:center; }
+

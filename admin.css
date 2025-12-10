@@ -1,0 +1,94 @@
+/* Layout geral */
+.admin-body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Inter", sans-serif;
+    padding: 40px;
+}
+
+.admin-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    gap: 24px;
+}
+
+/* Títulos */
+.admin-title {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.admin-subtitle {
+    color: var(--muted);
+    margin-top: -10px;
+}
+
+/* Tabela estilizada */
+.admin-table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    background: color-mix(in oklab, var(--bg), var(--tint) 8%);
+    border: 1px solid color-mix(in oklab, var(--line), var(--tint) 25%);
+    padding: 12px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 14px;
+    background: color-mix(in oklab, var(--bg), var(--tint) 18%);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-weight: 700;
+}
+
+.admin-table td {
+    padding: 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Ações */
+.admin-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit,
+.btn-delete {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-edit {
+    background: #0077ff;
+}
+.btn-edit:hover {
+    background: #005fcc;
+}
+
+.btn-delete {
+    background: #c92c2c;
+}
+.btn-delete:hover {
+    background: #a12222;
+}
+
+/* Link inferior */
+.admin-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+.admin-link:hover {
+    opacity: 0.7;
+}
